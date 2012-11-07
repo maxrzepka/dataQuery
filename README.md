@@ -48,9 +48,9 @@ The definition of source can be split into 2 parts :
 
 A query is a plain map which at the execution expandes to a cascalog query , SQL or other API.
 
-#+begin_src clojure
+```clojure
 { :aggregate #{:type} :filter {:region "Europe"} :source s}
-#+end_src
+```
 
 ### Storage
 
