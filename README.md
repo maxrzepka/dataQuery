@@ -7,17 +7,11 @@ A non-intrusive solution to query data of any kind.
   - Other storage
 
 The pipe processing is performed directly from the source.
-Any conventional DataWarehouse solution first extracts all data in a big black box : it's called ETL
-On contrary with this solution it
+On contrary conventional DataWarehouse solution first extracts all data in big central repository (ETL stage).
 
-Here it's just optional for performance reason to perform join never a constraint.
-
-The goal is to produc analytics starting with the aggregation operation likewise the SQL's group by.
+The goal is to produce analytics starting with the aggregation operation likewise the SQL's group by.
 Is there a need for a new query language ?
 No, just simple datastructure à la datalog is enough like in cascalog or datomic.
-
-Process data to produce analytics starting with the simple but quite useful SQL's group by .
-So need of a new query language ? No just simple datastructure is enough à la datalog (cf cascalog and datomic).
 
 ## Concepts
 
@@ -59,7 +53,7 @@ adding new type of storage should be straightforward.
 
 ### Custom Columns
 Adding new column should be also declarative.
-Here an example of a column named balance-bins groups records according their balance buckets.
+Here an example of a column named balance-bins that groups records according their balance buckets.
 
 ```clojure
 {:balance-bins [:bucket :balance 0 1000 10000]}
